@@ -1,2 +1,0 @@
-# Womerz
-Train project
