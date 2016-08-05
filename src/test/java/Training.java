@@ -10,8 +10,8 @@ import static com.jayway.restassured.RestAssured.responseSpecification;
 
 public class Training {
 
-    private static String LoginEmail = "loginEmail";
-    private static String LoginPassword = "password";
+    private static String LoginEmail = "PlzEnterloginEmail";
+    private static String LoginPassword = "PlzEnterpassword";
 
     @Test
     public void loginA(){

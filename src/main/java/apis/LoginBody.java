@@ -4,8 +4,8 @@ import org.json.simple.JSONObject;
 
 public class LoginBody {
 
-    private static String LoginEmail = "loginEmail";
-    private static String LoginPassword = "password";
+    private static String LoginEmail = "PlzEnterloginEmail";
+    private static String LoginPassword = "PlzEnterpassword";
 
 
     public String generateJSONBodyForLogin() {
