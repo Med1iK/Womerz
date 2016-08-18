@@ -1,3 +1,5 @@
+import apis.CampaignBody;
+import apis.CampaignSendler;
 import apis.LoginBody;
 import apis.LoginSender;
 import org.apache.http.entity.ContentType;
@@ -12,6 +14,18 @@ public class LoginTest {
 
         LoginBody loginBody = new LoginBody();
         String issue = loginBody.generateJSONBodyForLogin();
+
+    }
+
+
+    @Test
+    public void createGoodStyleCampaign(){
+
+        CampaignBody campaignBody = new CampaignBody();
+        String campaignB = campaignBody.generateJsonBodyForCampaign();
+
+        CampaignSendler campaignSendler = new CampaignSendler();
+        campaignSendler.createCampaign(campaignB);
 
     }
 }
