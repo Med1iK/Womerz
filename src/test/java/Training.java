@@ -6,7 +6,10 @@ import org.testng.annotations.Test;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import static com.jayway.restassured.RestAssured.get;
 import static com.jayway.restassured.RestAssured.given;
+import static com.jayway.restassured.RestAssured.post;
+
 
 public class Training {
 
@@ -40,20 +43,22 @@ public class Training {
     private static String pause = "false";
 
     @Test(priority = 1)
-    public void loginA(){
+    public void loginA() {
         RestAssured.baseURI = "http://apiwomerz.wbd.co.il";
 
         JSONObject application = new JSONObject();
         application.put("email", LoginEmail);
         application.put("password", LoginPassword);
 
-        Response response = given().
+
+/*        Response response = given().
                 header("Content-Type", "application/json").
                 body(application.toJSONString()).
                 when().
                 post("/auth/local").
                 then().
-                statusCode(200).extract().response();
+                statusCode(200).extract().response();*/
+/*
         System.out.println("Response:" + response.asString());
         Pattern MY_PATTERN = Pattern.compile("^\\{\\\"token\\\"\\:\\\"(.+)\\\"\\}");
         Matcher m = MY_PATTERN.matcher(response.asString());
@@ -61,10 +66,21 @@ public class Training {
             JSSESSIONID = m.group(1);
         else
             System.out.println("No token match =(");
+
         System.out.println("Token = " + JSSESSIONID);
+*/
+
+        JSSESSIONID = given().
+                header("Content-Type", "application/json").
+                body(application.toJSONString()).
+                when().
+                post("/auth/local").
+                then().
+                statusCode(200).
+                extract().
+                path("token");
+        System.out.println(JSSESSIONID);
     }
-
-
 
     @Test(priority = 2)
     public void createNewCampaign(){
@@ -109,6 +125,5 @@ public class Training {
                 statusCode(200).
                 extract().response();
         System.out.println("Response:" + response.asString());
-
     }
 }
