@@ -5,19 +5,21 @@ import com.jayway.restassured.http.ContentType;
 import com.jayway.restassured.response.Response;
 import com.jayway.restassured.specification.RequestSpecification;
 
+import static com.jayway.restassured.RestAssured.given;
 
-public class LoginSender {
 
-    public static String JSESSIONID = null;
+public class RequestSender {
+
+    public  String JSESSIONID = null;
     public final static ContentType CONTENT_TYPE = ContentType.JSON;
-    public static RequestSpecification requestSpecification = null;
-    public static Response response = null;
+    public  RequestSpecification requestSpecification = null;
+    public  Response response = null;
 
 
-    public LoginSender(){
-        authorization();
-    }
-    public Response authorization() {
+    public RequestSender(){ authorization(); }
+
+
+    public void authorization() {
         RestAssured.baseURI = "http://apiwomerz.wbd.co.il";
 
         LoginBody loginBody = new LoginBody();
@@ -26,58 +28,70 @@ public class LoginSender {
         createRequest(credentials)
                 .post(LoginUrl.LOGIN.getUri());
 
-        this.JSESSIONID = response.then().extract().path("session.value");
+        this.JSESSIONID = response.then().statusCode(200).extract().path("token"); //session.value
 
-        System.out.println("Response:" + response.asString());
-        return response;
+        System.out.println("Response:" + JSESSIONID);
+
     }
 
-    public LoginSender createRequest (String body){
-        this.createRequestSpecification()
+
+    public RequestSender createRequest (String body){
+         this.createRequestSpecification()
                 .addHeader("Content Type", CONTENT_TYPE.toString())
                 .addBody(body);
         return this;
     }
 
-    public LoginSender createRequestSpecification() {
-        requestSpecification = requestSpecification.given().
+    public RequestSender createAuthorizationRequest(String body){
+        System.out.println(JSESSIONID);
+        this.createRequestSpecification()
+                .addHeader("Content Type", CONTENT_TYPE.toString())
+               // .addHeader("Cookie", "JSESSIONID=" + RequestSender.JSESSIONID)
+                .addHeader("Authorization", "Bearer "+JSESSIONID)
+                .addBody(body);
+        return this;
+    }
+
+    public RequestSender createRequestSpecification() {
+        requestSpecification = given().
                 when();
         return this;
     }
 
 
-    public LoginSender addHeader(String headerName, String headerValue) {
+    public RequestSender addHeader(String headerName, String headerValue) {
         requestSpecification.header(headerName, headerValue);
         return this;
     }
 
-    public LoginSender addBody(String body) {
+    public RequestSender addBody(String body) {
         requestSpecification.body(body);
         return this;
     }
 
-    public LoginSender post(String uri) {
+    public RequestSender post(String uri) {
         response = requestSpecification.post(uri);
         return this;
     }
 
-    public LoginSender patch(String uri) {
+    public RequestSender patch(String uri) {
         response = requestSpecification.patch(uri);
         return this;
     }
 
-    public LoginSender delete(String uri) {
+    public RequestSender delete(String uri) {
         response = requestSpecification.delete(uri);
         return this;
     }
 
-    public LoginSender get(String uri) {
+    public RequestSender get(String uri) {
         response = requestSpecification.get(uri);
         return this;
     }
 
 
     public String extractResponseByPath(String path){
+
         return response.then().extract().path(path);
     }
 

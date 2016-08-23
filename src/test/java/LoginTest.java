@@ -1,7 +1,6 @@
 import apis.CampaignBody;
-import apis.CampaignSendler;
+import apis.IssueApi;
 import apis.LoginBody;
-import apis.LoginSender;
 import org.apache.http.entity.ContentType;
 import org.testng.annotations.Test;
 import static org.testng.Assert.assertEquals;
@@ -9,23 +8,31 @@ import static org.testng.AssertJUnit.assertTrue;
 
 public class LoginTest {
 
-    @Test
+    @Test(priority = 1)
     public void LoginByAdmin(){
 
         LoginBody loginBody = new LoginBody();
         String issue = loginBody.generateJSONBodyForLogin();
 
+        System.out.println(issue);
     }
 
 
-    @Test
+    @Test(priority = 2)
     public void createGoodStyleCampaign(){
+
+       // String issueToken = null;
 
         CampaignBody campaignBody = new CampaignBody();
         String campaignB = campaignBody.generateJsonBodyForCampaign();
 
-        CampaignSendler campaignSendler = new CampaignSendler();
-        campaignSendler.createCampaign(campaignB);
+        IssueApi issueApi = new IssueApi();
+        issueApi.createNewCampaign(campaignB);
 
+       // assertEquals(issueApi.response.statusCode(), 200);
+        //assertTrue(issueApi.response.contentType().contains(ContentType.APPLICATION_JSON.toString()));
+
+       // issueToken = issueApi.extractResponseByPath("token");
+        System.out.println(campaignB );
     }
 }
