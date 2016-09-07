@@ -4,8 +4,8 @@ import org.json.simple.JSONObject;
 
 public class LoginBody {
 
-    private static String LoginEmail = "PlzEnterloginEmail";
-    private static String LoginPassword = "PlzEnterpassword";
+    private static String LoginEmail = "admin@example.com";
+    private static String LoginPassword = "456852456852za";
 
 
     public String generateJSONBodyForLogin() {
@@ -15,6 +15,4 @@ public class LoginBody {
         credentials.put("password", LoginPassword);
         return credentials.toJSONString();
     }
-
-
 }
