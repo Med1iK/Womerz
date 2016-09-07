@@ -1,9 +1,9 @@
-package apis;
+package utils;
 
 public enum LoginUrl {
 
-    LOGIN("/auth/local"),
-    Campaign ("/api/campaigns");
+    LOGIN("/auth/local?email=admin@example.com&password=456852456852za"),
+    Campaign ("/api/campaigns/");
 
     private String uri;
 

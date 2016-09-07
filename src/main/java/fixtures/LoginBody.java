@@ -1,11 +1,11 @@
-package apis;
+package fixtures;
 
 import org.json.simple.JSONObject;
 
 public class LoginBody {
 
-    private static String LoginEmail = "admin@example.com";
-    private static String LoginPassword = "456852456852za";
+    private static String LoginEmail = "******";
+    private static String LoginPassword = "******";
 
 
     public String generateJSONBodyForLogin() {

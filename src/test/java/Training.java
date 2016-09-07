@@ -13,12 +13,12 @@ import static com.jayway.restassured.RestAssured.post;
 
 public class Training {
 
-    private static String LoginEmail = "PlzEnterloginEmail";
-    private static String LoginPassword = "PlzEnterpassword";
+    private static String LoginEmail = "******";
+    private static String LoginPassword = "*****";
     private static String JSSESSIONID = null;
 
 
-    private static String categoryId = "1";
+    private static String categoryId = "59";
     private static String countryId = "2";
     private static String title = "I Hope, that it will be work";
     private static String url = "http://domain/some/url/";
@@ -51,14 +51,14 @@ public class Training {
         application.put("password", LoginPassword);
 
 
-/*        Response response = given().
+        Response response = given().
                 header("Content-Type", "application/json").
                 body(application.toJSONString()).
                 when().
                 post("/auth/local").
                 then().
-                statusCode(200).extract().response();*/
-/*
+                statusCode(200).extract().response();
+
         System.out.println("Response:" + response.asString());
         Pattern MY_PATTERN = Pattern.compile("^\\{\\\"token\\\"\\:\\\"(.+)\\\"\\}");
         Matcher m = MY_PATTERN.matcher(response.asString());
@@ -68,7 +68,8 @@ public class Training {
             System.out.println("No token match =(");
 
         System.out.println("Token = " + JSSESSIONID);
-*/
+
+
 
         JSSESSIONID = given().
                 header("Content-Type", "application/json").
