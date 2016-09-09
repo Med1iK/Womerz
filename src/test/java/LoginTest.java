@@ -1,6 +1,5 @@
-import fixtures.CampaignBody;
 import apis.IssueApi;
-import fixtures.LoginBody;
+import fixtures.JiraJSONFixture;
 import org.testng.annotations.Test;
 import static org.testng.Assert.assertEquals;
 import static org.testng.AssertJUnit.assertTrue;
@@ -8,14 +7,14 @@ import static org.testng.AssertJUnit.assertTrue;
 import com.jayway.restassured.http.ContentType;
 
 
-@Test(groups = {"API", "LoginTest"})
+//@Test(groups = {"API", "LoginTest"})
 public class LoginTest {
 
 /*    @Test(priority = 1)
     public void LoginByAdmin(){
 
-        LoginBody loginBody = new LoginBody();
-        String issue = loginBody.generateJSONBodyForLogin();
+        JiraJSONFixture loginBody = new JiraJSONFixture();
+        String issue = loginBody.generateJSONForLogin();
         System.out.println(issue);
     }*/
 
@@ -24,16 +23,14 @@ public class LoginTest {
 
       // String issueToken = null;
 
-        CampaignBody campaignBody = new CampaignBody();
-        String campaign = campaignBody.generateJsonBodyForCampaign();
+        JiraJSONFixture jiraJSONFixture = new JiraJSONFixture();
+        String campaign = jiraJSONFixture.generateJsonBodyForCampaign();
 
         IssueApi issueApi = new IssueApi();
         issueApi.createNewCampaign(campaign);
-        System.out.println("WHTF" + issueApi);
-        System.out.println("HEHEH" + campaign);
 
         assertEquals(issueApi.response.statusCode(), 200);
         assertTrue(issueApi.response.contentType().contains(ContentType.JSON.toString()));
-
+        System.out.println("YEEE" + issueApi.response.toString());
     }
 }

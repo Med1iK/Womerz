@@ -13,8 +13,8 @@ import static com.jayway.restassured.RestAssured.post;
 
 public class Training {
 
-    private static String LoginEmail = "******";
-    private static String LoginPassword = "*****";
+    private static String LoginEmail = "********";
+    private static String LoginPassword = "*******";
     private static String JSSESSIONID = null;
 
 

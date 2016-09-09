@@ -1,37 +1,48 @@
-/*
 package fixtures;
 
 import org.json.simple.JSONObject;
 
+public class JiraJSONFixture {
 
-public class CampaignBody {
+    private static String name = "********";
+    private static String password = "********";
 
-    private static String categoryId = "59";
-    private static String countryId = "3";
+
+
+    private static String categoryId = "60";
+    private static String countryId = "2";
     private static String title = "I Hope, that it will be work";
-    private static String url = "http://domain/some/url";
-    private static String videoUrl = "http://domain/some/url";
-    private static String base64 = "http://www.google";
+    private static String url = "http://domain/some/url/";
+    private static String videoUrl = "http://domain/some/url/";
+    private static String base64 = "Base64 encode content";
     private static String filetype = "jpeg";
-    private static String companyUrl = "http://domain/some/url";
-    private static String description = "Hello dear friend";
-    private static String content = "Hello World";
-    private static String isHot = "false";
+    private static String companyUrl = "http://domain/some/url/";
+    private static String description = "Hello";
+    private static String content = "Hi";
+    private static String isHot = "true";
     private static String dateStart = "2016-04-29T10:01:59.709Z";
     private static String dateEnd = "2016-05-29T10:02:13.316Z";
-    private static String limitActions = "12";
-    private static String limitDailyActions = "12";
-    private static String budget = "12";
-    private static String budgetPerDay = "12";
-    private static String currentAmount = "12";
+    private static String limitActions = "1";
+    private static String limitDailyActions = "1";
+    private static String budget = "1";
+    private static String budgetPerDay = "1";
+    private static String currentAmount = "1";
     private static String rewardType = "money";
-    private static String giftName = "Diana";
-    private static String giftDescription = "Diana";
+    private static String giftName = "null";
+    private static String giftDescription = "null";
     private static String active = "true";
     private static String pause = "false";
 
 
+    public String generateJSONForLogin() {
+        JSONObject credentials = new JSONObject();
+/*        credentials.put("username", name);
+        credentials.put("password", password);*/
+        return credentials.toJSONString();
+    }
+
     public String generateJsonBodyForCampaign() {
+
 
         JSONObject imageUrl = new JSONObject();
         imageUrl.put("base64", base64);
@@ -63,5 +74,6 @@ public class CampaignBody {
 
         return campaignB.toJSONString();
     }
+
+
 }
-*/

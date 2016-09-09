@@ -8,7 +8,7 @@ public class IssueApi extends RequestSender {
 
     public void createNewCampaign(String body) {
         requestSender
-                .createAuthorizationRequest(body)
+                .createRequestS(body)
                 .post(LoginUrl.Campaign.getUri());
     }
 }
