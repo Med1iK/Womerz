@@ -28,7 +28,7 @@ public class RequestSender {
         JiraJSONFixture jiraJSONFixture = new JiraJSONFixture();
         String credentials = jiraJSONFixture.generateJSONForLogin();
 
-        System.out.println("Do we have body?" + credentials);
+      //  System.out.println("Do we have body?" + credentials);
         createRequest(credentials)
                 .post(LoginUrl.LOGIN.getUri());
 
@@ -40,7 +40,6 @@ public class RequestSender {
     public RequestSender createRequest(String body){
         this.createRequestSpecification()
                 .addHeader("Content-Type", CONTENT_TYPE.toString())
-                //.addHeader("Authorization", "Bearer " + RequestSender.JSESSIONID)
                 .addBody(body);
         return this;
     }

@@ -2,8 +2,9 @@ package utils;
 
 public enum LoginUrl {
 
-    LOGIN("/auth/local?email=*****&password=*****"),
-    Campaign("/api/campaigns");
+    LOGIN("/auth/local"),
+    Campaign("/api/campaigns"),
+    SocialNetwork("api/campaigns/socials/");
 
     private String uri;
 
