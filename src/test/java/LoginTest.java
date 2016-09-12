@@ -38,7 +38,8 @@ public class LoginTest {
     public void createGoodStyleSocialForCampaign(){
 
         CampaignSocials campaignSocials = new CampaignSocials();
-        String socialBody = campaignSocials.generateSocialNetworkWithMoneyForCampaign();
+        //String socialBody = campaignSocials.generateSocialNetworkWithMoneyForCampaign();
+        String socialBody = campaignSocials.generateSocialNetworkWithGiftForCampaign();
 
         IssueApi issueApi2 = new IssueApi();
         issueApi2.createSocialForCampaign(socialBody);

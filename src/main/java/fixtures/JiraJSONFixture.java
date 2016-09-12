@@ -4,8 +4,8 @@ import org.json.simple.JSONObject;
 
 public class JiraJSONFixture {
 
-    private static String name = "********";
-    private static String password = "********";
+    private static String name = "*********";
+    private static String password = "*********";
 
 
     private static String categoryId = "60";

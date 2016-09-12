@@ -10,7 +10,8 @@ public class CampaignSocials {
 
         private int campaignId = IdFromCampaign;
         private static String provider = "facebook";
-        private static String rewardType = "money";
+        private static String rewardTypeMoney = "money";
+        private static String rewardTypeGift = "gift";
         private static String giftName = "StarShip";
         private static String giftDescription = "HeheHahaYeeep";
         private static int TotalLike = 5;
@@ -49,7 +50,42 @@ public class CampaignSocials {
         JSONObject socialNetwork = new JSONObject();
         socialNetwork.put("campaignId", campaignId);
         socialNetwork.put("provider", provider);
-        socialNetwork.put("rewardType", rewardType);
+        socialNetwork.put("rewardType", rewardTypeMoney);
+        socialNetwork.put("limitActions", totalActions);
+        socialNetwork.put("limitDailyActions", dailyActions);
+        socialNetwork.put("budget", budget);
+        socialNetwork.put("budgetPerDay", budgetPerDay);
+        socialNetwork.put("paused", paused);
+        socialNetwork.put("active", active);
+        socialNetwork.put("spots", spots);
+        socialNetwork.put("costs", actionsCost);
+
+        return socialNetwork.toJSONString();
+    }
+
+    public String generateSocialNetworkWithGiftForCampaign(){
+
+        JSONObject totalActions = new JSONObject();
+        totalActions.put("like", TotalLike);
+        totalActions.put("share", TotalShare);
+        totalActions.put("comment", TotalComment);
+
+        JSONObject dailyActions = new JSONObject();
+        dailyActions.put("like", Dailylike);
+        dailyActions.put("share", Dailyshare);
+        dailyActions.put("comment", Dailycomment);
+
+        JSONObject actionsCost = new JSONObject();
+        actionsCost.put("like", likeCost);
+        actionsCost.put("share", shareCost);
+        actionsCost.put("comment", commentCost);
+
+        JSONObject socialNetwork = new JSONObject();
+        socialNetwork.put("campaignId", campaignId);
+        socialNetwork.put("provider", provider);
+        socialNetwork.put("rewardType", rewardTypeGift);
+        socialNetwork.put("giftName", giftName);
+        socialNetwork.put("giftDescription", giftDescription);
         socialNetwork.put("limitActions", totalActions);
         socialNetwork.put("limitDailyActions", dailyActions);
         socialNetwork.put("budget", budget);
