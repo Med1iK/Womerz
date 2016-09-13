@@ -4,7 +4,8 @@ public enum LoginUrl {
 
     LOGIN("/auth/local"),
     Campaign("/api/campaigns"),
-    SocialNetwork("api/campaigns/socials/");
+    SocialNetwork("/api/campaigns/socials/"),
+    DeleteCampaign("/api/campaigns/");
 
     private String uri;
 

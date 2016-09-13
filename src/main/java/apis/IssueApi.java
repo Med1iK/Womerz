@@ -24,4 +24,11 @@ public class IssueApi extends RequestSender {
         System.out.println(CampaignId);
         System.out.println(LoginUrl.SocialNetwork.getUri() + IssueApi.CampaignId);
     }
+
+    public void deleteNewCampaign(){
+        requestSender
+                .createRequestWithoutBody()
+                .delete(LoginUrl.DeleteCampaign.getUri() + IssueApi.CampaignId);
+        System.out.println("Tell me plz ID of campaign, which we want to delete, thanks=)" + LoginUrl.DeleteCampaign.getUri() + IssueApi.CampaignId);
+    }
 }

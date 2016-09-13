@@ -13,8 +13,8 @@ import static com.jayway.restassured.RestAssured.post;
 
 public class Training {
 
-    private static String LoginEmail = "********";
-    private static String LoginPassword = "*******";
+    private static String LoginEmail = "************";
+    private static String LoginPassword = "************";
     private static String JSSESSIONID = null;
 
 
@@ -126,5 +126,20 @@ public class Training {
                 statusCode(200).
                 extract().response();
         System.out.println("Response:" + response.asString());
+    }
+
+    @Test(priority = 3)
+    public void DeleteThisShit(){
+        RestAssured.baseURI = "http://apiwomerz.wbd.co.il";
+
+
+        Response response = given().
+                header("Content-Type", "application/json").
+                header("Authorization", "Bearer " + JSSESSIONID).
+                when().
+                delete("/api/campaigns/432").
+                then().
+                statusCode(200).extract().response();
+        System.out.println("Show me response" + response.asString());
     }
 }

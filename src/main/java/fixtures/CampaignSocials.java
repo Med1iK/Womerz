@@ -5,29 +5,29 @@ import org.json.simple.JSONObject;
 
 public class CampaignSocials {
 
-        IssueApi issueApi = new IssueApi();
-        int IdFromCampaign = issueApi.CampaignId;
+    IssueApi issueApi = new IssueApi();
+    int IdFromCampaign = issueApi.CampaignId;
 
-        private int campaignId = IdFromCampaign;
-        private static String provider = "facebook";
-        private static String rewardTypeMoney = "money";
-        private static String rewardTypeGift = "gift";
-        private static String giftName = "StarShip";
-        private static String giftDescription = "HeheHahaYeeep";
-        private static int TotalLike = 5;
-        private static int TotalShare = 5;
-        private static int TotalComment = 5;
-        private static int Dailylike = 5;
-        private static int Dailyshare = 5;
-        private static int Dailycomment = 5;
-        private static int budget = 300;
-        private static int budgetPerDay = 150;
-        private static String paused = "false";
-        private static String active = "true";
-        private static int spots = 50;
-        private static int likeCost= 25;
-        private static int shareCost= 25;
-        private static int commentCost= 25;
+    private int campaignId = IdFromCampaign;
+    private static String provider = "facebook";
+    private static String rewardTypeMoney = "money";
+    private static String rewardTypeGift = "gift";
+    private static String giftName = "StarShip";
+    private static String giftDescription = "HeheHahaYeeep";
+    private static int TotalLike = 5;
+    private static int TotalShare = 5;
+    private static int TotalComment = 5;
+    private static int Dailylike = 5;
+    private static int Dailyshare = 5;
+    private static int Dailycomment = 5;
+    private static int budget = 300;
+    private static int budgetPerDay = 150;
+    private static String paused = "false";
+    private static String active = "true";
+    private static int spots = 50;
+    private static int likeCost= 25;
+    private static int shareCost= 25;
+    private static int commentCost= 25;
 
 
     public String generateSocialNetworkWithMoneyForCampaign(){

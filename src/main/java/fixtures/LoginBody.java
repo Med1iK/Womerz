@@ -1,12 +1,11 @@
-/*
 package fixtures;
 
 import org.json.simple.JSONObject;
 
 public class LoginBody {
 
-    private static String LoginEmail = "**********";
-    private static String LoginPassword = "**********";
+    private static String LoginEmail = "************";
+    private static String LoginPassword = "************";
 
 
     public String generateJSONBodyForLogin() {
@@ -17,4 +16,3 @@ public class LoginBody {
         return credentials.toJSONString();
     }
 }
-*/

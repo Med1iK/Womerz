@@ -1,11 +1,12 @@
+/*
 package fixtures;
 
 import org.json.simple.JSONObject;
 
 public class JiraJSONFixture {
 
-    private static String name = "*********";
-    private static String password = "*********";
+    private static String name = "admin@example.com";
+    private static String password = "456852456852za";
 
 
     private static String categoryId = "60";
@@ -73,3 +74,4 @@ public class JiraJSONFixture {
         return campaignB.toJSONString();
     }
 }
+*/

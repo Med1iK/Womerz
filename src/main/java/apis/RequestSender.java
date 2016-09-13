@@ -4,7 +4,7 @@ import com.jayway.restassured.RestAssured;
 import com.jayway.restassured.http.ContentType;
 import com.jayway.restassured.response.Response;
 import com.jayway.restassured.specification.RequestSpecification;
-import fixtures.JiraJSONFixture;
+import fixtures.LoginBody;
 import utils.LoginUrl;
 
 import static com.jayway.restassured.RestAssured.given;
@@ -25,10 +25,10 @@ public class RequestSender {
     public void authenticate() {
         RestAssured.baseURI = "http://apiwomerz.wbd.co.il";
 
-        JiraJSONFixture jiraJSONFixture = new JiraJSONFixture();
-        String credentials = jiraJSONFixture.generateJSONForLogin();
+        LoginBody loginBody = new LoginBody();
+        String credentials = loginBody.generateJSONBodyForLogin();
 
-      //  System.out.println("Do we have body?" + credentials);
+        //  System.out.println("Do we have body?" + credentials);
         createRequest(credentials)
                 .post(LoginUrl.LOGIN.getUri());
 
@@ -48,6 +48,12 @@ public class RequestSender {
                 .addHeader("Content-Type", IssueApi.CONTENT_TYPE.toString())
                 .addHeader("Authorization", "Bearer " + RequestSender.JSESSIONID)
                 .addBody(body);
+        return this;
+    }
+    public RequestSender createRequestWithoutBody(){
+        this.createRequestSpecification()
+                .addHeader("Content-Type", CONTENT_TYPE.toString())
+                .addHeader("Authorization", "Bearer " + RequestSender.JSESSIONID);
         return this;
     }
 
@@ -75,6 +81,11 @@ public class RequestSender {
 
     public RequestSender get(String uri) {
         response = requestSpecification.get(uri);
+        return this;
+    }
+
+    public RequestSender delete(String uri) {
+        response = requestSpecification.delete(uri);
         return this;
     }
 
