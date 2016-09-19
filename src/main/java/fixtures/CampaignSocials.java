@@ -9,7 +9,13 @@ public class CampaignSocials {
     int IdFromCampaign = issueApi.CampaignId;
 
     private int campaignId = IdFromCampaign;
-    private static String provider = "facebook";
+    private static String facebook = "facebook";
+    private static String twitter = "twitter";
+    private static String google = "google";
+    private static String youtube = "youtube";
+    private static String instagram = "instagram";
+    private static String likedin = "likedin";
+
     private static String rewardTypeMoney = "money";
     private static String rewardTypeGift = "gift";
     private static String giftName = "StarShip";
@@ -49,7 +55,7 @@ public class CampaignSocials {
 
         JSONObject socialNetwork = new JSONObject();
         socialNetwork.put("campaignId", campaignId);
-        socialNetwork.put("provider", provider);
+        socialNetwork.put("provider", facebook);
         socialNetwork.put("rewardType", rewardTypeMoney);
         socialNetwork.put("limitActions", totalActions);
         socialNetwork.put("limitDailyActions", dailyActions);
@@ -82,7 +88,7 @@ public class CampaignSocials {
 
         JSONObject socialNetwork = new JSONObject();
         socialNetwork.put("campaignId", campaignId);
-        socialNetwork.put("provider", provider);
+        socialNetwork.put("provider", facebook);
         socialNetwork.put("rewardType", rewardTypeGift);
         socialNetwork.put("giftName", giftName);
         socialNetwork.put("giftDescription", giftDescription);

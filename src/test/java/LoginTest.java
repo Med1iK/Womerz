@@ -1,12 +1,11 @@
 import apis.IssueApi;
+import com.jayway.restassured.http.ContentType;
 import fixtures.CampaignBody;
 import fixtures.CampaignSocials;
-import fixtures.LoginBody;
 import org.testng.annotations.Test;
+
 import static org.testng.Assert.assertEquals;
 import static org.testng.AssertJUnit.assertTrue;
-
-import com.jayway.restassured.http.ContentType;
 
 
 //@Test(groups = {"API", "LoginTest"})
@@ -18,8 +17,8 @@ public class LoginTest {
         LoginBody loginBody = new LoginBody();
         String issue = loginBody.generateJSONBodyForLogin();
         System.out.println(issue);
-    }*/
-
+    }
+*/
 
     CampaignBody campaignBody = new CampaignBody();
     CampaignSocials campaignSocials = new CampaignSocials();
@@ -59,4 +58,5 @@ public class LoginTest {
         assertEquals(issueApi3.response.statusCode(), 200);
         assertTrue(issueApi3.response.contentType().contains(ContentType.JSON.toString()));
     }
+
 }
