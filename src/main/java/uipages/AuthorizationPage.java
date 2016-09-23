@@ -18,15 +18,36 @@ public class AuthorizationPage extends PageObject {
     @FindBy(id = "u_0_2")
     private WebElementFacade LoginButton;
 
+/*    @FindBy(name = "pass")
+    private WebElementFacade UserSecondPassword;
+
+    @FindBy(id = "u_0_0")
+    private WebElementFacade ContinueButton;*/
+
+    @FindBy(xpath = "//*[@class = 'dataRow']/child::td[@class='data']//@type", timeoutInSeconds = "10")
+    private WebElementFacade UserSecondPassword;
+
+    @FindBy(id = "u_0_0")
+    private WebElementFacade ContinueButton;
+
     public void EnterUserEmail(String UserEmail) {
         this.UserEmail.sendKeys(UserEmail);
     }
 
-    public void EnterUserPassword(String UserPassword){
+    public void EnterUserPassword(String UserPassword) {
         this.UserPassword.sendKeys(UserPassword);
     }
-    public void ClickOnLoginButton(){
+
+    public void ClickOnLoginButton() {
         this.LoginButton.click();
+    }
+
+    public void EnterUserSecondPassword(String UserSecondPassword) {
+        this.UserSecondPassword.sendKeys(UserSecondPassword);
+    }
+
+    public void ClickOnContinueButton(){
+        this.ContinueButton.click();
     }
 
 }

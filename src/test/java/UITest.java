@@ -24,8 +24,10 @@ public class UITest {
     @Test
     public void succsessfullyLogin(){
         authorizationPageUser.GoToLoginPage();
-        authorizationPageUser.EnterUserEmail("************");
-        authorizationPageUser.EnterUserPassword("************");
+        authorizationPageUser.EnterUserEmail("test@stairwaysoft.net");
+        authorizationPageUser.EnterUserPassword("111222333");
         authorizationPageUser.ClickOnLoginButton();
+        authorizationPageUser.EnterUserSecondPassword("111222333");
+        authorizationPageUser.ClickOnContinueButton();
     }
 }

@@ -1,59 +1,62 @@
-<acceptance-test-run title="Succsessfully login" name="succsessfullyLogin" steps="8" successful="5" failures="0" errors="1" skipped="2" ignored="0" pending="0" annotated-result="ERROR" result="ERROR" duration="14233" timestamp="2016-09-19T18:01:34.383+03:00" session-id="e7fa5310-4837-482c-9de4-a05c37b9da6e">
+<acceptance-test-run title="Succsessfully login" name="succsessfullyLogin" steps="10" successful="4" failures="0" errors="1" skipped="5" ignored="0" pending="0" annotated-result="ERROR" result="ERROR" duration="21011" timestamp="2016-09-23T14:58:30.639+03:00" session-id="8dfd20da-14a5-4b3a-9a6d-a917186ecd28">
   <user-story id="UITest" name="UI test" path=""/>
   <tags>
     <tag name="UI test" type="story"/>
   </tags>
-  <test-step result="SUCCESS" duration="5540">
+  <test-step result="SUCCESS" duration="5212">
     <screenshots>
       <screenshot image="bfbff5f0d753b9d8ce0d1bbeb4e1d68e.png"/>
     </screenshots>
     <description>Go to login page</description>
   </test-step>
-  <test-step result="SUCCESS" duration="364">
+  <test-step result="SUCCESS" duration="350">
     <screenshots>
       <screenshot image="23afa9b28e7076bed7842262f964bb8d.png"/>
     </screenshots>
     <description>Enter user email: &lt;span class=&apos;step-parameter&apos;&gt;test@stairwaysoft.net&lt;/span&gt;</description>
   </test-step>
-  <test-step result="SUCCESS" duration="237">
+  <test-step result="SUCCESS" duration="227">
     <screenshots>
       <screenshot image="8a61d7a03136364c91a23e3d8a833d2d.png"/>
     </screenshots>
     <description>Enter user password: &lt;span class=&apos;step-parameter&apos;&gt;111222333&lt;/span&gt;</description>
   </test-step>
-  <test-step result="SUCCESS" duration="2569">
+  <test-step result="SUCCESS" duration="2748">
     <screenshots>
       <screenshot image="30cec02cf105d46784dad5f30a6e6a44.png"/>
     </screenshots>
     <description>Click on login button</description>
   </test-step>
-  <test-step result="SUCCESS" duration="1018">
+  <test-step result="ERROR" duration="12335">
     <screenshots>
-      <screenshot image="365c4f5b3646f0df8c66885b5749bedf.png"/>
+      <screenshot image="30cec02cf105d46784dad5f30a6e6a44.png" source="pagesource7931745429322383443.html.txt"/>
     </screenshots>
-    <description>Go to login page</description>
-  </test-step>
-  <test-step result="ERROR" duration="4408">
-    <screenshots>
-      <screenshot image="365c4f5b3646f0df8c66885b5749bedf.png" source="pagesource4688198552603154636.html.txt"/>
-    </screenshots>
-    <description>Enter user email: &lt;span class=&apos;step-parameter&apos;&gt;test@stairwaysoft.net&lt;/span&gt;</description>
-    <error>org.openqa.selenium.NoSuchElementException: Timed out after 2 seconds. Element not found
+    <description>Enter user second password: &lt;span class=&apos;step-parameter&apos;&gt;111222333&lt;/span&gt;</description>
+    <error>org.openqa.selenium.NoSuchElementException: Timed out after 10 seconds. Element not found
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
 System info: host: &apos;DESKTOP-1HEAJNJ&apos;, ip: &apos;10.37.9.238&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_73&apos;
 Driver info: driver.version: unknown</error>
-    <exception>org.openqa.selenium.NoSuchElementException:Timed out after 2 seconds. Element not found
+    <exception>org.openqa.selenium.NoSuchElementException:Timed out after 10 seconds. Element not found
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
 System info: host: &apos;DESKTOP-1HEAJNJ&apos;, ip: &apos;10.37.9.238&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_73&apos;
 Driver info: driver.version: unknown&#xd;
-[uipages.AuthorizationPage.EnterUserEmail(AuthorizationPage.java:22), uisteps.AuthorizationPageUser.EnterUserEmail(AuthorizationPageUser.java:18), UITest.succsessfullyLogin(UITest.java:27)]</exception>
+[uipages.AuthorizationPage.EnterUserSecondPassword(AuthorizationPage.java:46), uisteps.AuthorizationPageUser.EnterUserSecondPassword(AuthorizationPageUser.java:33), UITest.succsessfullyLogin(UITest.java:30), UITest.setUp(UITest.java:18)]</exception>
   </test-step>
   <test-step result="SKIPPED" duration="1">
+    <description>Go to login page</description>
+  </test-step>
+  <test-step result="SKIPPED" duration="1">
+    <description>Enter user email: &lt;span class=&apos;step-parameter&apos;&gt;test@stairwaysoft.net&lt;/span&gt;</description>
+  </test-step>
+  <test-step result="SKIPPED" duration="0">
     <description>Enter user password: &lt;span class=&apos;step-parameter&apos;&gt;111222333&lt;/span&gt;</description>
   </test-step>
-  <test-step result="SKIPPED" duration="2">
+  <test-step result="SKIPPED" duration="0">
     <description>Click on login button</description>
+  </test-step>
+  <test-step result="SKIPPED" duration="0">
+    <description>Enter user second password: &lt;span class=&apos;step-parameter&apos;&gt;111222333&lt;/span&gt;</description>
   </test-step>
 </acceptance-test-run>

@@ -27,4 +27,14 @@ public class AuthorizationPageUser {
     public void ClickOnLoginButton(){
         authorizationPage.ClickOnLoginButton();
     }
+
+    @Step
+    public void EnterUserSecondPassword(String UserSecondPassword){
+        authorizationPage.EnterUserSecondPassword(UserSecondPassword);
+    }
+
+    @Step
+    public void ClickOnContinueButton(){
+        authorizationPage.ClickOnContinueButton();
+    }
 }
