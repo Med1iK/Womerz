@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru" class="" dir="ltr" style="display: block;"><head>
+    <meta charset="utf-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta content="width=device-width; initial-scale=1.0; maximum-scale=1.0;" name="viewport" />
+    <title>Твиттер / Авторизовать приложение</title>
+    <link href="https://abs-0.twimg.com/login/tfw-base.c00ccbe52fc5680544a65d64aa0e639fa94ded85.css" media="screen" type="text/css" rel="stylesheet" />
+    <!--[if (IEMobile) & (lt IE 9)]>
+      <link href="https://abs-0.twimg.com/login/phoenix-iemobile.104678bc7c9a0fb1f16229c5bb8c4288c0e1b560.css" media="screen" rel="stylesheet" type="text/css" />
+    <![endif]-->
+        <meta content="Твиттер" name="mswebdialog-title" /><meta content="https://abs.twimg.com/favicons/win8-auth-60.png" name="mswebdialog-logo" /><meta content="#202020" name="mswebdialog-header-color" /><meta content="*" name="mswebdialog-newwindowurl" />
+
+
+      <script type="text/javascript" src="//abs-0.twimg.com/login/base.ace79779943a820cbcf0cd70ea0a24af08aac412.js"></script>
+      <script type="text/javascript" src="//abs-0.twimg.com/login/authorize_page.c4edf9ccaf94a42b6963991691957aaa827aa56b.js"></script>
+  </head>
+  
+  
+  <body class="oauth write tfw ru logged-out    noloki js">
+
+    <div role="banner" id="header">
+      <div class="bar">
+        <h1 class="logo">
+          <a href="https://twitter.com/home" class="alternate-context">Твиттер</a>
+        </h1>
+
+        <div id="not-logged-in">
+              <a class="register alternate-context" href="https://twitter.com/signup?context=oauth&amp;oauth_token=aumNXgAAAAAAuKWbAAABV2vKL7Q">Регистрация</a>
+
+        </div>
+      </div>
+    </div>
+
+    <div role="main" id="bd">
+          
+
+
+
+
+    <div class="auth">
+      <h2>Разрешить приложению Womerz test использовать вашу учетную запись?</h2>
+
+      <div tabindex="0" role="content-info" class="app-info">
+  <h3>
+    <img title="Womerz test" src="https://abs.twimg.com/a/1404172626/images/oauth_application.png" class="app-icon" alt="" />
+    Womerz test
+  </h3>
+  <dl>
+      <dt class="url">URL-адрес приложения</dt>
+      <dd class="url">apiwomerz.wbd.co.il/</dd>
+      <dt class="notes">Об этом приложении</dt>
+      <dd class="notes"><p>Womerz test</p></dd>
+
+  </dl>
+</div>
+
+      <form target="_self" method="post" id="oauth_form" action="https://api.twitter.com/oauth/authenticate">
+        <div>
+          <input type="hidden" value="c6896366b4f55d13152665d04967b1001b7ce4ca" name="authenticity_token" />
+          <input type="hidden" value="https://api.twitter.com/oauth/authenticate?oauth_token=aumNXgAAAAAAuKWbAAABV2vKL7Q" name="redirect_after_login" />
+        </div>
+
+        <input type="hidden" value="aumNXgAAAAAAuKWbAAABV2vKL7Q" name="oauth_token" id="oauth_token" />
+
+          <fieldset class="sign-in">
+  <legend>Войти в Твиттер</legend>
+  <div class="row user">
+    <label tabindex="-1" for="username_or_email">Псевдоним или адрес электронной почты</label>
+    <input type="text" value="" name="session[username_or_email]" id="username_or_email" class="text" autofocus="autofocus" autocorrect="off" autocapitalize="off" aria-required="true" />
+  </div>
+  <div class="row password">
+    <label tabindex="-1" for="password">Пароль</label>
+    <input type="password" value="" name="session[password]" id="password" class="password text" aria-required="true" />
+  </div>
+  <p>
+    <input type="checkbox" value="1" id="remember" name="remember_me" />
+    <label for="remember">Запомнить</label>
+    ·
+    <a target="_blank" class="alternate-context" href="https://twitter.com/account/resend_password">Забыли пароль?</a>
+  </p>
+</fieldset>
+
+
+        <fieldset class="buttons">
+          <legend>Войти в Womerz test, используя вашу учётную запись?</legend>
+          <input type="submit" id="allow" class="submit button selected" value="Войти" />
+
+            <input type="submit" value="Отмена" name="cancel" id="cancel" class="submit button" />
+
+        </fieldset>
+      </form>
+
+      
+<div class="permissions allow">
+  <p><strong>Это приложение сможет:</strong></p>
+  <ul>
+      <li>Читать твиты из вашей ленты.</li>
+
+
+      <li>Рекомендовать новых пользователей.</li>
+      <li>Обновлять ваш профиль.</li>
+      <li>Публиковать твиты от вашего имени.</li>
+
+
+
+  </ul>
+</div>
+      <div class="permissions deny">
+  <p><strong>Не сможет:</strong></p>
+  <ul>
+
+      <li>Открыть доступ к вашим личным сообщениям.</li>
+
+
+    <li>Видеть пароль к Твиттеру.</li>
+  </ul>
+</div>
+
+    </div>
+
+    </div>
+
+
+  <div role="navigation" class="footer"><div id="ft">
+    
+        
+  <p class="tip">Вы можете запретить доступ к любому приложению в любое время на вкладке <a target="_blank" href="https://twitter.com/settings/applications">Приложения</a> страницы «Настройки».</p>
+  <p><small>Открывая доступ приложению, вы не отменяете действующих  <a target="_blank" href="https://twitter.com/tos">Условий предоставления услуг</a>. В частности, у Твиттера появится доступ к вашей статистике использования. Подробнее см. <a target="_blank" href="https://twitter.com/privacy">Политику конфиденциальности</a>.</small></p>
+
+
+
+
+  </div></div>
+
+  
+
+</body><canvas id="fxdriver-screenshot-canvas" style="display: none;" width="1251" height="845"></canvas></html>

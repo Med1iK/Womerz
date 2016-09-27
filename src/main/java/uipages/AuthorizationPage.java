@@ -18,13 +18,7 @@ public class AuthorizationPage extends PageObject {
     @FindBy(id = "u_0_2")
     private WebElementFacade LoginButton;
 
-/*    @FindBy(name = "pass")
-    private WebElementFacade UserSecondPassword;
-
-    @FindBy(id = "u_0_0")
-    private WebElementFacade ContinueButton;*/
-
-    @FindBy(xpath = "//*[@class = 'dataRow']/child::td[@class='data']//@type", timeoutInSeconds = "10")
+    @FindBy(xpath = "//*[@class = 'dataRow']/child::td[@class='data']//input", timeoutInSeconds = "10")
     private WebElementFacade UserSecondPassword;
 
     @FindBy(id = "u_0_0")

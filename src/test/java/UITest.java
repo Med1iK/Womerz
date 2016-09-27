@@ -24,10 +24,10 @@ public class UITest {
     @Test
     public void succsessfullyLogin(){
         authorizationPageUser.GoToLoginPage();
-        authorizationPageUser.EnterUserEmail("********");
-        authorizationPageUser.EnterUserPassword("********");
+        authorizationPageUser.EnterUserEmail("*********");
+        authorizationPageUser.EnterUserPassword("*********");
         authorizationPageUser.ClickOnLoginButton();
-        authorizationPageUser.EnterUserSecondPassword("********");
-        authorizationPageUser.ClickOnContinueButton();
+      //  authorizationPageUser.EnterUserSecondPassword("*********");
+     //   authorizationPageUser.ClickOnContinueButton();
     }
 }
