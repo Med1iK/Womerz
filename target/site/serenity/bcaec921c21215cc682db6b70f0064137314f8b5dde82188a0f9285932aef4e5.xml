@@ -1,59 +1,30 @@
-<acceptance-test-run title="Succsessfully login" name="succsessfullyLogin" steps="8" successful="5" failures="0" errors="1" skipped="2" ignored="0" pending="0" annotated-result="ERROR" result="ERROR" duration="14769" timestamp="2016-09-27T18:40:37.367+03:00" session-id="f444f00a-9d12-4a9b-9943-2018d8434462">
+<acceptance-test-run title="Succsessfully login" name="succsessfullyLogin" steps="4" successful="4" failures="0" skipped="0" ignored="0" pending="0" result="SUCCESS" duration="8830" timestamp="2016-09-28T18:29:53.697+03:00" session-id="5e1de203-138f-4a42-9f1b-3fc687f0e327">
   <user-story id="UITest" name="UI test" path=""/>
   <tags>
     <tag name="UI test" type="story"/>
   </tags>
-  <test-step result="SUCCESS" duration="5262">
+  <test-step result="SUCCESS" duration="5226">
     <screenshots>
       <screenshot image="bfbff5f0d753b9d8ce0d1bbeb4e1d68e.png"/>
     </screenshots>
     <description>Go to login page</description>
   </test-step>
-  <test-step result="SUCCESS" duration="344">
+  <test-step result="SUCCESS" duration="358">
     <screenshots>
       <screenshot image="23afa9b28e7076bed7842262f964bb8d.png"/>
     </screenshots>
     <description>Enter user email: &lt;span class=&apos;step-parameter&apos;&gt;test@stairwaysoft.net&lt;/span&gt;</description>
   </test-step>
-  <test-step result="SUCCESS" duration="220">
+  <test-step result="SUCCESS" duration="246">
     <screenshots>
       <screenshot image="8a61d7a03136364c91a23e3d8a833d2d.png"/>
     </screenshots>
     <description>Enter user password: &lt;span class=&apos;step-parameter&apos;&gt;111222333&lt;/span&gt;</description>
   </test-step>
-  <test-step result="SUCCESS" duration="2931">
+  <test-step result="SUCCESS" duration="2786">
     <screenshots>
       <screenshot image="30cec02cf105d46784dad5f30a6e6a44.png"/>
     </screenshots>
-    <description>Click on login button</description>
-  </test-step>
-  <test-step result="SUCCESS" duration="1280">
-    <screenshots>
-      <screenshot image="365c4f5b3646f0df8c66885b5749bedf.png"/>
-    </screenshots>
-    <description>Go to login page</description>
-  </test-step>
-  <test-step result="ERROR" duration="4640">
-    <screenshots>
-      <screenshot image="365c4f5b3646f0df8c66885b5749bedf.png" source="pagesource7734543412025523198.html.txt"/>
-    </screenshots>
-    <description>Enter user email: &lt;span class=&apos;step-parameter&apos;&gt;test@stairwaysoft.net&lt;/span&gt;</description>
-    <error>org.openqa.selenium.NoSuchElementException: Timed out after 2 seconds. Element not found
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
-System info: host: &apos;DESKTOP-1HEAJNJ&apos;, ip: &apos;10.37.9.238&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_73&apos;
-Driver info: driver.version: unknown</error>
-    <exception>org.openqa.selenium.NoSuchElementException:Timed out after 2 seconds. Element not found
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
-System info: host: &apos;DESKTOP-1HEAJNJ&apos;, ip: &apos;10.37.9.238&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_73&apos;
-Driver info: driver.version: unknown&#xd;
-[uipages.AuthorizationPage.EnterUserEmail(AuthorizationPage.java:33), uisteps.AuthorizationPageUser.EnterUserEmail(AuthorizationPageUser.java:18), UITest.succsessfullyLogin(UITest.java:27)]</exception>
-  </test-step>
-  <test-step result="SKIPPED" duration="0">
-    <description>Enter user password: &lt;span class=&apos;step-parameter&apos;&gt;111222333&lt;/span&gt;</description>
-  </test-step>
-  <test-step result="SKIPPED" duration="1">
     <description>Click on login button</description>
   </test-step>
 </acceptance-test-run>

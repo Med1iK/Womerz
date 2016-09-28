@@ -1,0 +1,6 @@
+<acceptance-test-run title="Facebook" name="facebook" steps="0" successful="0" failures="0" skipped="0" ignored="0" pending="0" annotated-result="ERROR" result="ERROR" duration="222" timestamp="2016-09-28T18:24:27.706+03:00">
+  <user-story id="UITest" name="UI test" path=""/>
+  <tags>
+    <tag name="UI test" type="story"/>
+  </tags>
+</acceptance-test-run>

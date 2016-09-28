@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="1" failures="0" name="UITest" skipped="0" tests="2" time="9.16" timestamp="2016-09-272 06:24:27"><testcase classname="UITest" name="Facebook"><error type="java.lang.NullPointerException"/><system-err>null&#13;
+UITest.facebook(UITest.java:45)&#13;
+</system-err></testcase><testcase classname="UITest" name="Succsessfully login"/></testsuite>

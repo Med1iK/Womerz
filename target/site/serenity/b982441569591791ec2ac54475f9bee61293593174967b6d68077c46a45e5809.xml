@@ -1,0 +1,57 @@
+<acceptance-test-run title="Confirm login" name="confirmLogin" steps="8" successful="4" failures="0" errors="1" skipped="3" ignored="0" pending="0" annotated-result="ERROR" result="ERROR" duration="16810" timestamp="2016-09-28T12:30:19.624+03:00" session-id="b1b408ca-01d3-4d11-8563-a3f651a62c90">
+  <user-story id="UITest" name="UI test" path=""/>
+  <tags>
+    <tag name="UI test" type="story"/>
+  </tags>
+  <test-step result="SUCCESS" duration="1051">
+    <screenshots>
+      <screenshot image="365c4f5b3646f0df8c66885b5749bedf.png"/>
+      <screenshot image="797308c05d41e5c2bab1ccbe7d9689ff.png"/>
+    </screenshots>
+    <description>Go to login page</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="250">
+    <screenshots>
+      <screenshot image="09b0780d47a34736173d9108e8394374.png"/>
+    </screenshots>
+    <description>Enter user email: &lt;span class=&apos;step-parameter&apos;&gt;test@stairwaysoft.net&lt;/span&gt;</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="214">
+    <screenshots>
+      <screenshot image="94138837d83bf2dbca61a22cbb929cc0.png"/>
+    </screenshots>
+    <description>Enter user password: &lt;span class=&apos;step-parameter&apos;&gt;111222333&lt;/span&gt;</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="2977">
+    <screenshots>
+      <screenshot image="30cec02cf105d46784dad5f30a6e6a44.png"/>
+    </screenshots>
+    <description>Click on login button</description>
+  </test-step>
+  <test-step result="ERROR" duration="12305">
+    <screenshots>
+      <screenshot image="30cec02cf105d46784dad5f30a6e6a44.png" source="pagesource550047218440885274.html.txt"/>
+    </screenshots>
+    <description>Enter user second password: &lt;span class=&apos;step-parameter&apos;&gt;111222333&lt;/span&gt;</description>
+    <error>org.openqa.selenium.NoSuchElementException: Timed out after 10 seconds. Element not found
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;DESKTOP-1HEAJNJ&apos;, ip: &apos;10.37.9.238&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_73&apos;
+Driver info: driver.version: unknown</error>
+    <exception>org.openqa.selenium.NoSuchElementException:Timed out after 10 seconds. Element not found
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;DESKTOP-1HEAJNJ&apos;, ip: &apos;10.37.9.238&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_73&apos;
+Driver info: driver.version: unknown&#xd;
+[uipages.AuthorizationPage.EnterUserSecondPassword(AuthorizationPage.java:40), uisteps.AuthorizationPageUser.EnterUserSecondPassword(AuthorizationPageUser.java:33), UITest.confirmLogin(UITest.java:39)]</exception>
+  </test-step>
+  <test-step result="SKIPPED" duration="6">
+    <description>Click on continue button</description>
+  </test-step>
+  <test-step result="SKIPPED" duration="0">
+    <description>Enter user second password: &lt;span class=&apos;step-parameter&apos;&gt;111222333&lt;/span&gt;</description>
+  </test-step>
+  <test-step result="SKIPPED" duration="0">
+    <description>Click on continue button</description>
+  </test-step>
+</acceptance-test-run>
